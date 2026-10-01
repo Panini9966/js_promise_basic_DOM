@@ -32,7 +32,7 @@ promise1.catch(() => {
   body.append(notificationError);
 });
 
-promise1.then(() => {
+promise2.then(() => {
   const notificationSuccess = document.createElement('div');
 
   notificationSuccess.classList.add('message');
