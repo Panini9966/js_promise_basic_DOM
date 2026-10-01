@@ -24,6 +24,22 @@ promise1.then(() => {
   body.append(notificationSuccess);
 });
 
+promise1.catch(() => {
+  const notificationError = document.createElement('div');
+
+  notificationError.classList.add('message', 'error-message');
+  notificationError.textContent = 'Promise was rejected!';
+  body.append(notificationError);
+});
+
+promise1.then(() => {
+  const notificationSuccess = document.createElement('div');
+
+  notificationSuccess.classList.add('message');
+  notificationSuccess.textContent = 'Promise was resolved!';
+  body.append(notificationSuccess);
+});
+
 promise2.catch(() => {
   const notificationError = document.createElement('div');
 
